@@ -2,15 +2,7 @@
 def eb = vertx.eventBus()
 
 eb.consumer("news-feed", { message ->
-  println("Received news on consumer 1: ${message.body()}")
+  println("${Thread.currentThread().name} => Received news on consumer: ${message.body()}")
 })
 
-eb.consumer("news-feed", { message ->
-  println("Received news on consumer 2: ${message.body()}")
-})
-
-eb.consumer("news-feed", { message ->
-  println("Received news on consumer 3: ${message.body()}")
-})
-
-println("Ready!")
+println("${Thread.currentThread().name} => Ready!")

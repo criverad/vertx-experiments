@@ -8,7 +8,7 @@ vertx.setPeriodic(1000, { v ->
     if (reply.succeeded()) {
       println("${Thread.currentThread().name} => Received reply ${reply.result().body()}")
     } else {
-      println("No reply")
+      println("${Thread.currentThread().name} => No reply")
     }
   })
 

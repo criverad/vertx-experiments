@@ -8,4 +8,4 @@ eb.consumer("ping-address", { message ->
   message.reply("pong!")
 })
 
-println("Receiver ready!")
+println("${Thread.currentThread().name} => Receiver ready!")

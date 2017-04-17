@@ -20,5 +20,18 @@ vertx run scripts/pointtopoint/sender.groovy -cluster
 
 The Event Bus is now clustered so both sender and receiver are able to communicate.
 
+3. Play with number of instances for both sender and receiver
+
+```
+vertx run scripts/pointtopoint/receiver.groovy -cluster -instances=3
+vertx run scripts/pointtopoint/sender.groovy -cluster -instances=2
+```
+
 ## Pub-Sub
 
+Run the following commands:
+
+```
+vertx run scripts/pubsub/receiver.groovy -cluster -instances=3
+vertx run scripts/pubsub/sender.groovy -cluster
+```
