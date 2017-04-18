@@ -11,7 +11,7 @@ vertx run scripts/event-loop-thread.groovy -ha -instances=2
 2. Run the same script in a different Vert.x instance by running:
 
 ```
-vertx run sipts/event-loop-thread.groovy -ha -instances=3
+vertx run scripts/event-loop-thread.groovy -ha -instances=3
 ```
 
 3. Run the following command to get a list of all the Vert.x instances currently running:
